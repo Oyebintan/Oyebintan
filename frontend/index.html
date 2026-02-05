@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hybrid Feature Selection Spam Classifier</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <h1>Hybrid Feature Selection for Email Spam</h1>
+        <p>
+          This demo combines Chi-Square and Mutual Information feature selection with
+          a lightweight deep learning classifier.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Train the Model</h2>
+        <p>
+          Click train to build the pipeline with the bundled sample dataset. The model
+          runs entirely in the backend.
+        </p>
+        <div class="row">
+          <label for="epochs">Epochs</label>
+          <input id="epochs" type="number" min="1" max="50" value="12" />
+          <button id="train-btn">Train</button>
+        </div>
+        <pre id="train-output" class="output"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>Classify Emails</h2>
+        <textarea
+          id="message-input"
+          rows="6"
+          placeholder="Paste an email message to classify..."
+        ></textarea>
+        <button id="predict-btn">Classify</button>
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
